@@ -19,7 +19,7 @@ public interface MessageRepository extends JpaRepository<Message, Integer>{
     int deleteMessageById(Integer messageId);
 
     @Query("SELECT m FROM message m WHERE m.posted_by = ?1")
-    List<Message> findAllByPosted_by(Integer posted_by);
+    List<Message> findAllByPostedby(Integer postedby);
     
     
 }
